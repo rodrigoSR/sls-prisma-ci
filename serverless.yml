@@ -1,12 +1,23 @@
 service: ciprisma
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 provider:
   name: aws
   runtime: nodejs14.x
 
+custom:
+  webpack:
+    includeModules: true
+  serverless-offline:
+    httpPort: 4000
+
+plugins:
+  - serverless-webpack
+  - serverless-webpack-prisma
+  - serverless-offline
+
 functions:
   api:
-    handler: handler.handler
+    handler: src/handler.server
     events:
-      - httpApi: '*'
+      - httpApi: "*"
