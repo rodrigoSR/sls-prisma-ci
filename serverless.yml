@@ -8,6 +8,9 @@ provider:
 custom:
   webpack:
     includeModules: true
+  prisma:
+    #define prisma schema path
+    # prismaPath: "./src"
   serverless-offline:
     httpPort: 4000
 

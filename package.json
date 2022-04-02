@@ -2,6 +2,9 @@
   "name": "ciprisma",
   "version": "1.0.0",
   "description": "",
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
+  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.93",
     "@types/express": "^4.17.13",
