@@ -7,6 +7,7 @@ const prisma = new PrismaClient();
 
 app.get("/", async (req, res) => {
   try {
+    console.log(process.env.DB_URL);
     const message = await prisma.message.findMany();
     return res.json({
       text: "Hello World",
