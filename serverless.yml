@@ -4,8 +4,7 @@ frameworkVersion: "3"
 provider:
   name: aws
   runtime: nodejs14.x
-  environment:
-    DB_URL: TESTE DE VARIAVEL
+  environment: ${file(configs.js)}
 
 custom:
   dotenvVars: ${file(configs.js)}
